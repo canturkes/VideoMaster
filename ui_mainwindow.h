@@ -513,7 +513,7 @@ public:
         groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "Free Mode", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", "Jump To:", nullptr));
         label_11->setText(QCoreApplication::translate("MainWindow", "Step:", nullptr));
-        groupBox->setTitle(QCoreApplication::translate("MainWindow", "Boomerang & Loop", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("MainWindow", "Boomerang && Loop", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "From:", nullptr));
         loopCheckBox->setText(QCoreApplication::translate("MainWindow", "Loop", nullptr));
         boomLoopEnableCheckBox->setText(QCoreApplication::translate("MainWindow", "Enable", nullptr));
