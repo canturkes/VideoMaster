@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>679</width>
-    <height>422</height>
+    <width>641</width>
+    <height>387</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -35,16 +35,16 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="browseButton">
+       <widget class="QPushButton" name="openVideoButton">
         <property name="text">
-         <string>Browse</string>
+         <string>Open</string>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="openVideoButton">
+       <widget class="QPushButton" name="browseButton">
         <property name="text">
-         <string>Open</string>
+         <string>Browse</string>
         </property>
        </widget>
       </item>
@@ -469,8 +469,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>679</width>
-     <height>25</height>
+     <width>641</width>
+     <height>20</height>
     </rect>
    </property>
   </widget>
@@ -478,8 +478,8 @@
  </widget>
  <tabstops>
   <tabstop>videoFileNameLineEdit</tabstop>
-  <tabstop>browseButton</tabstop>
   <tabstop>openVideoButton</tabstop>
+  <tabstop>browseButton</tabstop>
   <tabstop>closeVideoButton</tabstop>
   <tabstop>savePathLineEdit</tabstop>
   <tabstop>savePathSetButton</tabstop>
@@ -497,9 +497,10 @@
   <tabstop>stepSpinBox</tabstop>
   <tabstop>boomLoopEnableCheckBox</tabstop>
   <tabstop>loopCheckBox</tabstop>
+  <tabstop>reverseCheckBox</tabstop>
   <tabstop>boomLoopFromSpinBox</tabstop>
-  <tabstop>boomLoopToSpinBox</tabstop>
   <tabstop>boomLoopDelaySpinBox</tabstop>
+  <tabstop>boomLoopToSpinBox</tabstop>
   <tabstop>applyButton</tabstop>
   <tabstop>saveFrameButton</tabstop>
   <tabstop>locationHorizontalSlider</tabstop>

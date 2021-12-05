@@ -503,7 +503,7 @@ void MainWindow::on_saveFrameButton_clicked()
     if ( vid.isOpened() ) {
         if (!finalFrame.empty()) {
             if (!boomLoopEnable) {
-                auto saveFileName = savePath + "vm_f" + std::to_string(currentFrameIndex) // --optional
+                auto saveFileName = savePath + "VM_f" + std::to_string(currentFrameIndex) // --optional
                                             + createTimeStamp() + ".png";
                 cv::imwrite(saveFileName, finalFrame);
             } else QMessageBox::warning(this, "Warning", "Cannot save during Boomerang mode.");

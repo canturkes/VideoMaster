@@ -39,8 +39,8 @@ public:
     QHBoxLayout *horizontalLayout_5;
     QLabel *label;
     QLineEdit *videoFileNameLineEdit;
-    QPushButton *browseButton;
     QPushButton *openVideoButton;
+    QPushButton *browseButton;
     QPushButton *closeVideoButton;
     QHBoxLayout *horizontalLayout_6;
     QLabel *label_8;
@@ -103,7 +103,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(673, 422);
+        MainWindow->resize(641, 387);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -120,15 +120,15 @@ public:
 
         horizontalLayout_5->addWidget(videoFileNameLineEdit);
 
-        browseButton = new QPushButton(centralwidget);
-        browseButton->setObjectName(QString::fromUtf8("browseButton"));
-
-        horizontalLayout_5->addWidget(browseButton);
-
         openVideoButton = new QPushButton(centralwidget);
         openVideoButton->setObjectName(QString::fromUtf8("openVideoButton"));
 
         horizontalLayout_5->addWidget(openVideoButton);
+
+        browseButton = new QPushButton(centralwidget);
+        browseButton->setObjectName(QString::fromUtf8("browseButton"));
+
+        horizontalLayout_5->addWidget(browseButton);
 
         closeVideoButton = new QPushButton(centralwidget);
         closeVideoButton->setObjectName(QString::fromUtf8("closeVideoButton"));
@@ -434,7 +434,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 673, 25));
+        menubar->setGeometry(QRect(0, 0, 641, 20));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));
@@ -455,9 +455,9 @@ public:
         label_6->setBuddy(boomLoopDelaySpinBox);
         label_4->setBuddy(boomLoopToSpinBox);
 #endif // QT_CONFIG(shortcut)
-        QWidget::setTabOrder(videoFileNameLineEdit, browseButton);
-        QWidget::setTabOrder(browseButton, openVideoButton);
-        QWidget::setTabOrder(openVideoButton, closeVideoButton);
+        QWidget::setTabOrder(videoFileNameLineEdit, openVideoButton);
+        QWidget::setTabOrder(openVideoButton, browseButton);
+        QWidget::setTabOrder(browseButton, closeVideoButton);
         QWidget::setTabOrder(closeVideoButton, savePathLineEdit);
         QWidget::setTabOrder(savePathLineEdit, savePathSetButton);
         QWidget::setTabOrder(savePathSetButton, scaleSpinBox);
@@ -474,10 +474,11 @@ public:
         QWidget::setTabOrder(jumpToSpinBox, stepSpinBox);
         QWidget::setTabOrder(stepSpinBox, boomLoopEnableCheckBox);
         QWidget::setTabOrder(boomLoopEnableCheckBox, loopCheckBox);
-        QWidget::setTabOrder(loopCheckBox, boomLoopFromSpinBox);
-        QWidget::setTabOrder(boomLoopFromSpinBox, boomLoopToSpinBox);
-        QWidget::setTabOrder(boomLoopToSpinBox, boomLoopDelaySpinBox);
-        QWidget::setTabOrder(boomLoopDelaySpinBox, applyButton);
+        QWidget::setTabOrder(loopCheckBox, reverseCheckBox);
+        QWidget::setTabOrder(reverseCheckBox, boomLoopFromSpinBox);
+        QWidget::setTabOrder(boomLoopFromSpinBox, boomLoopDelaySpinBox);
+        QWidget::setTabOrder(boomLoopDelaySpinBox, boomLoopToSpinBox);
+        QWidget::setTabOrder(boomLoopToSpinBox, applyButton);
         QWidget::setTabOrder(applyButton, saveFrameButton);
         QWidget::setTabOrder(saveFrameButton, locationHorizontalSlider);
 
@@ -490,10 +491,12 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "Video Master", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Video File: ", nullptr));
-        browseButton->setText(QCoreApplication::translate("MainWindow", "Browse", nullptr));
+        videoFileNameLineEdit->setPlaceholderText(QCoreApplication::translate("MainWindow", "Enter a file path ending with .mp4", nullptr));
         openVideoButton->setText(QCoreApplication::translate("MainWindow", "Open", nullptr));
+        browseButton->setText(QCoreApplication::translate("MainWindow", "Browse", nullptr));
         closeVideoButton->setText(QCoreApplication::translate("MainWindow", "Close", nullptr));
         label_8->setText(QCoreApplication::translate("MainWindow", "Save Path:", nullptr));
+        savePathLineEdit->setPlaceholderText(QCoreApplication::translate("MainWindow", "Enter a path without a trailing '/'", nullptr));
         savePathSetButton->setText(QCoreApplication::translate("MainWindow", "Set", nullptr));
         label_2->setText(QCoreApplication::translate("MainWindow", "Scale:", nullptr));
         label_10->setText(QCoreApplication::translate("MainWindow", "Interp:", nullptr));
